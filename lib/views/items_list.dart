@@ -70,6 +70,9 @@ class _ItemsDesignState extends State<ItemsDesign> {
               actions: <Widget>[
                 IconButton(
                   onPressed: () {
+                    setState(() {
+                      isLoadingMore = false;
+                    });
                     Navigator.of(context).pushNamed(Search.routeName);
                   },
                   icon: Icon(
